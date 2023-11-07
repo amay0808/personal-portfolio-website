@@ -4,9 +4,9 @@ This is the source code for my portfolio website. I built this to showcase what 
 
 ## Built with
 
-* HTML
-* CSS
-* [Font Awesome](https://fontawesome.com/)
+- HTML
+- CSS
+- [Font Awesome](https://fontawesome.com/)
 
 ## Demo
 
