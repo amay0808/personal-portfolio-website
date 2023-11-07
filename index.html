@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./webfonts/all.min.css" />
+  </head>
+  <body>
+    <nav>
+      <h2 id="logo">Adrian Mayfield</h2>
+      <ul class="navigation-items">
+        <li class="navigation-item"><a href="#about-me">About Me</a></li>
+        <li class="navigation-item"><a href="#projects">Projects</a></li>
+        <li class="navigation-item"><a href="#skills">Skills</a></li>
+        <li class="navigation-item"><a href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about-me">
+        <div class="about-me-container">
+          <div class="about-me-text-container">
+            <h2>About Me</h2>
+            <p>
+              Hello, my name is Adrian! As a Full Stack Developer with a
+              healthcare background, I bring a unique perspective to the tech
+              world. A proud graduate of the Triple Ten Coding Bootcamp, I've
+              honed and continue to refine my skills in the MERN stack (MongoDB,
+              Express.js, React, Node.js), staying at the forefront of
+              technology.
+            </p>
+            <p>
+              My journey from healthcare to technology is driven by a passion
+              for lifelong learning and growth. I am committed to creating
+              intuitive user experiences and relish opportunities to integrate
+              my healthcare insights with modern technology.
+            </p>
+            <p>
+              Based in the California Central Valley, I'm actively seeking both
+              in-person and or remote roles that challenge me and have the
+              potential for positive impact. I thrive on projects that meld
+              technical skill with deep empathy.
+            </p>
+            <p>
+              If you're in search of a developer who is eager to contribute to
+              transformative projects, let's connect and explore the
+              possibilities together!
+            </p>
+            <p>
+              Fun fact! I've been programing for
+              <span id="time-container">0</span> seconds!
+            </p>
+          </div>
+          <img
+            src="./images/Adrian.jpeg"
+            alt="A photo of Adrian"
+            class="portrait"
+          />
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Salt and Light Therapy</h3>
+          </summary>
+          <img
+            src="./images//project2.png"
+            alt="Lovelace's diagram from note G, the first published computer
+            algorithm"
+            class="project-image"
+          />
+          <p class="project-description">
+            Salt and Light Therapy is a website that provides online therapy for
+            individuals and couples. Our licensed therapist offer confidential
+            support from the comfort of your own home. We understand that modern
+            life can be challenging, and it can be difficult to find time to
+            attend traditional therapy sessions. That's why we offer the
+            convenience of online therapy, so you can receive the support you
+            need at a time that works for you. Visit our website at to learn
+            more and book your appointment.
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Around The U.S</h3>
+          </summary>
+          <img
+            src="./images/project1.png"
+            alt="project"
+            class="project-image"
+          />
+          <p class="project-description">
+            Around The U.S. is a web application that allows users to create a
+            virtual scrapbook of their travels throughout the United States.
+            With responsive design that ensures optimal viewing on any device,
+            users can add and remove photos, like photos of other users, and
+            make a few minor adjustments to their own profile.
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>WTWR (What to Wear)</h3>
+          </summary>
+          <img
+            src="./images/project3.png"
+            alt="project"
+            class="project-image"
+          />
+          <p class="project-description">
+            WTWR (What to Wear?) is a weather-based clothing recommendation
+            application. The goal of this project is to assist users by
+            providing suitable clothing recommendations derived from the daily
+            weather forecast.
+          </p>
+        </details>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div id="skills-container">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-react"></i>
+          <i class="fab fa-figma"></i>
+          <i class="fab fa-git"></i>
+          <i class="fas fa-terminal"></i>
+          <i class="fab fa-npm"></i>
+          <i class="fab fa-node"></i>
+          <i class="fab fa-github"></i>
+          <i class="fab fa-python"></i>
+        </div>
+      </section>
+    </main>
+
+    <footer>From healthcare to code – a journey of continuous learning</footer>
+  </body>
+  <script>
+    const timeContainer = document.getElementById("time-container");
+    const BIRTH_DAY = "10-05-2022";
+    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+      );
+
+      timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+  </script>
+</html>
